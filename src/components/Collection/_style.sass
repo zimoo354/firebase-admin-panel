@@ -1,0 +1,28 @@
+@import '../../_theme.sass'
+
+.collection-container
+    header
+        box-sizing: border-box
+    
+    .collection-action
+        border-radius: 100px
+        height: 32px
+        width: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: white
+        font-size: 1.25rem
+
+        &.collection-delete
+            background-color: #FA4170
+
+        &.collection-edit
+            background-color: #FDB259
+
+        &.collection-view
+            position: relative
+            cursor: pointer
+            background-color: #FFFFFF
+            color: $blue
+            z-index: 2

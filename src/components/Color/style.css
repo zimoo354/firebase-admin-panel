@@ -1,0 +1,7 @@
+.color-show {
+    display: block;
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+}

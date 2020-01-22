@@ -1,0 +1,131 @@
+@import './_theme.sass'
+
+// Components
+@import './components/Base/_style.sass'
+@import './components/Login/_style.sass'
+@import './components/SectionLink/_style.sass'
+@import './components/Collection/_style.sass'
+@import './components/Form/_style.sass'
+@import './components/PasswordField/_style.sass'
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css)
+
+body
+    overflow-x: hidden
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+th,
+td,
+span,
+dt,
+dd,
+li
+    font-family: 'Open Sans'
+    text-align: left
+
+img
+    max-width: 100%
+
+.column
+    box-sizing: border-box !important
+
+.control > input:not([type=checkbox]),
+.password-field > input:not([type=checkbox]),
+.control > .select,
+.control select,
+.fb-form button:not(.react-datepicker__navigation)
+    width: 100%
+    box-sizing: border-box
+    margin-bottom: 1rem
+    height: 2.75em !important
+
+input
+    border-color: $green
+
+button
+    margin-top: 1rem
+    border-radius: 100px !important
+
+    span.fa
+        margin-right: 4px
+
+    &.gradient
+        background: $gradient
+        color: white !important
+        border: none
+
+        &:hover, &:active, &:focus
+            color: #f3f3f3
+    
+a.linkbtn
+    &:link,
+    &:visited,
+    &:hover,
+    &:active
+        button
+            text-decoration: none
+            color: black
+
+a
+    &:link,
+    &:visited,
+    &:hover,
+    &:active
+        text-decoration: none
+        color: $blue
+
+.pad-und-md
+    padding-top: 5em
+    padding-bottom: 5em
+
+.dashboard
+    .fact
+        *
+            text-align: center
+        span.fa
+            font-size: 3rem
+            display: block
+            color: $green
+
+        .text
+            color: #666
+
+        .number
+            #333
+            font-weight: bold
+            font-size: 2rem
+            line-height: 1rem
+            display: flex
+            justify-content: center
+
+/* Visibility helpers */
+.show-for-small-only
+    @media screen and (max-width: 600px)
+        display: block !important
+    
+    @media screen and (min-width: 601px)
+        display: none !important
+
+.hide-for-small-only
+    @media screen and (max-width: 600px)
+        display: none !important
+    
+    @media screen and (min-width: 601px)
+        display: block !important
+
+.container.collection-container
+    max-width: 100% !important
+
+    .data-table > header
+        width: 50%
+        float: left

@@ -1,0 +1,121 @@
+@import '../../_theme.sass'
+
+.header
+    background-color: $header-bg
+    width: 100vw
+    height: $header-height
+    position: fixed
+    top: 0
+    left: 0
+    overflow: visible
+    z-index: 5
+
+    .logo
+        height: 44px
+        margin-top: 10px
+        margin-left: 1rem
+        float: left
+
+.user-dd
+    text-align: right
+    margin: 1rem
+    padding: 1rem
+
+    a
+        margin-right: 1rem
+        color: white !important
+    
+    .fa
+        color: red
+        cursor: pointer
+
+.profile-pic
+    height: 32px
+    width: 32px
+    border-radius: 100px
+    display: inline-block
+    background-size: cover
+    position: absolute
+    margin-left: -42px
+    margin-top: -6px
+
+.sidebar
+    background-color: $sidebar-bg
+    height: calc(100vh - #{$header-height})
+    width: $sidebar-width
+    position: fixed
+    top: $header-height
+    left: 0
+    transition: 200ms
+    max-width: 100vw
+    z-index: 10
+    display: flex
+    flex-direction: column
+
+    .user-dd
+        text-align: center
+        flex-grow: 0
+
+        .fa
+            margin-left: 1rem
+            font-size: 1rem
+
+    @media screen and (max-width: 640px)
+        position: fixed
+        left: -$sidebar-width
+
+        &.open
+            left: 0
+
+
+    a
+        color: white !important
+        padding: 0
+
+        &.current
+            h4
+                background: $gradient
+
+        &.sidebar-link:last-of-type
+            flex-grow: 1
+
+        h4
+            margin: 0
+            padding: 1rem
+
+span.sidebar-toggle
+    position: fixed
+    z-index: 10
+    color: white
+    font-size: 2rem
+    right: 1rem
+    top: 1rem
+
+.main-container
+    background-color: $main-container-bg
+    position: absolute
+    right: 0
+    top: 64px
+    width: calc(100vw - #{$sidebar_width})
+    height: calc(100vh - 64px)
+    overflow-x: hidden
+    overflow-y: auto
+    box-sizing: border-box
+    padding: 1rem
+
+    @media screen and (max-width: 640px)
+        width: 100vw
+
+    &.full
+        width: 100vw
+        left: 0
+
+    &.dark
+        background-color: $sidebar-bg
+
+        *:not(input):not(button)
+            color: white
+
+    &.no-header
+        top: 0
+        height: 100vh
